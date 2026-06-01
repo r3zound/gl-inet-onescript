@@ -290,6 +290,11 @@ recovery_opkg_settings() {
 		mt2500a_opkg="https://mt3000.netlify.app/mt-2500a/distfeeds.conf"
 		wget -O /etc/opkg/distfeeds.conf ${mt2500a_opkg}
 		;;
+	huasifei-wh3000-pro)
+		echo "Device: huasifei WH3000 Pro detected, using Ali Cloud mirror."
+		huasifei_opkg="https://mt3000.netlify.app/huasifei-wh3000-pro/distfeeds.conf"
+		wget -O /etc/opkg/distfeeds.conf ${huasifei_opkg}
+		;;
 	*6000*)
 		update_opkg_config
 		;;
