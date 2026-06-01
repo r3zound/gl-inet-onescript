@@ -280,26 +280,13 @@ recovery_opkg_settings() {
 	echo "# add your custom package feeds here" >/etc/opkg/customfeeds.conf
 	router_name=$(get_router_name)
 	case "$router_name" in
-	*3000*)
-		echo "Router name contains '3000'."
-		mt3000_opkg="https://mt3000.netlify.app/mt-3000/distfeeds.conf"
-		wget -O /etc/opkg/distfeeds.conf ${mt3000_opkg}
-		;;
-	*2500*)
-		echo "Router name contains '2500'."
-		mt2500a_opkg="https://mt3000.netlify.app/mt-2500a/distfeeds.conf"
-		wget -O /etc/opkg/distfeeds.conf ${mt2500a_opkg}
-		;;
 	huasifei-wh3000-pro)
-		echo "Device: huasifei WH3000 Pro detected, using Ali Cloud mirror."
-		huasifei_opkg="https://mt3000.netlify.app/huasifei-wh3000-pro/distfeeds.conf"
+		echo "Device: huasifei WH3000 Pro detected."
+		huasifei_opkg="https://raw.githubusercontent.com/r3zound/gl-inet-onescript/main/huasifei-wh3000-pro/distfeeds.conf"
 		wget -O /etc/opkg/distfeeds.conf ${huasifei_opkg}
 		;;
-	*6000*)
-		update_opkg_config
-		;;
 	*)
-		echo "Router name does not contain '3000' 6000 or '2500'."
+		echo "Unsupported router: $router_name"
 		;;
 	esac
 }

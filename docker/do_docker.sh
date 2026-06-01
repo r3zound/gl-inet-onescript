@@ -34,7 +34,7 @@ install_depends_apps() {
         # 备份 /etc/opkg/distfeeds.conf
         cp /etc/opkg/distfeeds.conf /etc/opkg/distfeeds.conf.backup
         # 先替换为 mt3000 的软件源来安装 lsblk 和 fdisk 工具
-        mt3000_opkg="https://cafe.cpolar.cn/wkdaily/gl-inet-onescript/raw/branch/master/mt-3000/distfeeds.conf"
+        mt3000_opkg="https://raw.githubusercontent.com/r3zound/gl-inet-onescript/master/mt-3000/distfeeds.conf"
         wget -O /etc/opkg/distfeeds.conf ${mt3000_opkg}
         green "正在更新为 mt3000 的软件源"
         cat /etc/opkg/distfeeds.conf
