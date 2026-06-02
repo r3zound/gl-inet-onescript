@@ -259,7 +259,7 @@ set_glfan_temp() {
 			return 1 # 不是整数
 		fi
 	}
-	echo "兼容带风扇机型的GL-iNet路由器"
+	echo "HF WH3000 Pro 路由器工具箱"
 	echo "请输入风扇开始工作的温度(建议40-70之间的整数):"
 	read temp
 
@@ -401,9 +401,9 @@ do_install_filemanager() {
 }
 #更新脚本
 update_myself() {
-	wget -O gl-inet.sh "https://mt3000.netlify.app/gl-inet.sh" && chmod +x gl-inet.sh
-	echo "脚本已更新并保存在当前目录 gl-inet.sh,现在将执行新脚本。"
-	./gl-inet.sh
+	wget -O hf-wh3000pro.sh "https://raw.githubusercontent.com/r3zound/gl-inet-onescript/main/hf-wh3000pro.sh" && chmod +x hf-wh3000pro.sh
+	echo "脚本已更新并保存在当前目录 hf-wh3000pro.sh,现在将执行新脚本。"
+	./hf-wh3000pro.sh
 	exit 0
 }
 
@@ -520,15 +520,13 @@ while true; do
 	result=$gl_name"一键iStoreOS风格化"
 	result=$(echo "$result" | sed 's/ like iStoreOS//')
 	echo "***********************************************************************"
-	echo "*      一键安装工具箱(for gl-inet Router)"
+	echo "*      HF WH3000 Pro 一键工具箱"
 	echo "*      备用脚本 by @wukongdaily        "
 	echo "**********************************************************************"
 	echo "*      当前的路由器型号: "$gl_name | sed 's/ like iStoreOS//'
 	echo
 	echo "*******支持的机型列表***************************************************"
-	green "*******GL-iNet MT-2500A"
-	green "*******GL-iNet MT-3000 "
-	green "*******GL-iNet MT-6000 "
+	green "*******Huasifei WH3000 Pro"
 	echo "******************下次调用 直接输入快捷键 g  *****************************"
 	echo
 	light_magenta " 1. $result"

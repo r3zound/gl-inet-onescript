@@ -19,7 +19,7 @@
 ### SSH连接到路由器，执行如下命令
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/r3zound/gl-inet-onescript/main/gl-inet.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/r3zound/gl-inet-onescript/main/hf-wh3000pro.sh)"
 ```
 
 ## 📋 前置要求
